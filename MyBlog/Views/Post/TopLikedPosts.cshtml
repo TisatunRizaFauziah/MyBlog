@@ -1,0 +1,18 @@
+﻿@model List<Post>
+
+<div class="container">
+    <h1 class="text-center mb-4">Top 5 Liked Posts</h1>
+
+    @foreach (var post in Model.Take(5))
+    {
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="card-title">@post.Title</h2>
+            </div>
+            <div class="card-body">
+                <p class="card-text">@post.Content</p>
+                <p class="card-text"><strong>Likes:</strong> @post.Likes</p>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,22 @@
+﻿@model Post
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-danger text-white">
+            <h1>@Model.Title</h1>
+        </div>
+        <div class="card-body">
+            <p class="card-text">@Model.Content</p>
+            <p class="card-text"><small class="text-muted">Created on @Model.CreatedDate.ToShortDateString()</small></p>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="mb-0">Jumlah Like: @Model.Likes</p>
+                <div class="btn-group" role="group" aria-label="Post Actions">
+                    <a href="/post/index" class="btn btn-secondary m-2">Back</a>
+                    <a href="/post/edit/@Model.Id" class="btn btn-warning m-2">Edit</a>
+                    <a href="/post/delete/@Model.Id" class="btn btn-danger m-2">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

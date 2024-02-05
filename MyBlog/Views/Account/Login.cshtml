@@ -1,0 +1,32 @@
+﻿<div class="card">
+    <div class="card-header bg-danger text-white">
+        <h3>Login</h3>
+    </div>
+    <div class="card-body">
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">
+                User tidak ditemukan atau password salah!
+            </div>
+        }
+
+        <form method="post" action="Login">
+            <div class="mb-3">
+                <label for="Username" class="form-label">Username</label>
+                <input type="text" name="Username" class="form-control" id="Username" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" name="Password" class="form-control" id="Password" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <div class="mt-3">
+            <p>Belum punya akun? <a href="/Account/Register/">Daftar sekarang</a></p>
+        </div>
+    </div>
+</div>

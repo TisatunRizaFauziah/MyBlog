@@ -1,0 +1,40 @@
+﻿@model List<Post>
+
+<div class="container mt-5">
+    @foreach (var post in Model)
+    {
+        <div class="card mb-5">
+            <div class="card-header bg-danger text-white">
+                <h2 class="mb-0">@post.Title</h2>
+            </div>
+            <div class="card-body">
+                <p class="card-text">@post.Content</p>
+
+                <div class="btn-group" role="group" aria-label="Post Actions">
+                    <a href="/post/detail/@post.Id" class="btn btn-info">Detail</a>
+                    <a href="/post/edit/@post.Id" class="btn btn-warning">Edit</a>
+                    <a href="/post/delete/@post.Id" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="text-center">
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="/post/index?page=@ViewBag.PrevPage" aria-label="Previous">
+                        <span aria-hidden="true">&laquo; Sebelumnya</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="/post/index?page=@ViewBag.NextPage" aria-label="Next">
+                        <span aria-hidden="true">Selanjutnya &raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <br />
+        <a href="/post/create/" class="btn btn-success">Tambah Data Baru</a>
+    </div>
+</div>

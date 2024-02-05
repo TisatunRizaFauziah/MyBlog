@@ -1,0 +1,27 @@
+﻿@model Post
+
+<div class="card">
+    <div class="card-header bg-danger text-white">
+        <h3>Edit Post</h3>
+    </div>
+    <div class="card-body">
+        <form method="post" action="Edit">
+            <div class="mb-3">
+                <label for="Title" class="form-label">Title</label>
+                <input type="text"
+                       name="Title"
+                       value="@Model.Title"
+                       class="form-control"
+                       id="Title" />
+            </div>
+            <div class="mb-3">
+                <label for="Content" class="form-label">Content</label>
+                <textarea name="Content"
+                          class="form-control"
+                          id="Content">@Model.Content</textarea>
+            </div>
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <button type="submit" class="btn btn-success">Edit</button>
+        </form>
+    </div>
+</div>

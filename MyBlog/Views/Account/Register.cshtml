@@ -1,0 +1,79 @@
+﻿@model Register
+
+<div class="container mt-5">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h1 class="text-center">Registrasi</h1>
+                </div>
+                <div class="card-body" style="background-color: #f8f9fa;">
+                    <form method="post" asp-action="Register">
+
+                        <!-- Display any validation error message here -->
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label asp-for="Name">Nama</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <!-- Username -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Username">Username</label>
+                                    <input asp-for="Username" class="form-control" />
+                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Email">Email</label>
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label asp-for="Password">Password</label>
+                            <input asp-for="Password" type="password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <!-- Alamat -->
+                        <div class="form-group">
+                            <label asp-for="Alamat">Alamat</label>
+                            <input asp-for="Alamat" class="form-control" />
+                            <span asp-validation-for="Alamat" class="text-danger"></span>
+                        </div>
+
+                        <!-- NoTelepon -->
+                        <div class="form-group">
+                            <label asp-for="NoTelepon">No Telepon</label>
+                            <input asp-for="NoTelepon" class="form-control" />
+                            <span asp-validation-for="NoTelepon" class="text-danger"></span>
+                        </div>
+
+                        <!-- TanggalLahir -->
+                        <div class="form-group">
+                            <label asp-for="TanggalLahir">Tanggal Lahir</label>
+                            <input asp-for="TanggalLahir" type="date" class="form-control" />
+                            <span asp-validation-for="TanggalLahir" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center p-3">
+                            <button type="submit" class="btn btn-danger">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
