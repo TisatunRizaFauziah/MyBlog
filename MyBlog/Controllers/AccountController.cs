@@ -57,7 +57,7 @@ namespace MyBlog.Controllers
 			return RedirectToAction("Login");
 		}
         [Authorize]
-        public IActionResult Index()
+        public IActionResult Index()//view list user
         {
             var users = _context.Users.ToList(); 
             return View(users);

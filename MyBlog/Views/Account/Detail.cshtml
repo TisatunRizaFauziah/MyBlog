@@ -18,6 +18,10 @@
                             <td>@Model.Username</td>
                         </tr>
                         <tr>
+                            <th>Password:</th>
+                            <td>@Model.Password</td>
+                        </tr>
+                        <tr>
                             <th>Name:</th>
                             <td>@Model.Name</td>
                         </tr>
@@ -39,7 +43,7 @@
                         </tr>
                         <tr>
                             <th>Tanggal Lahir:</th>
-                            <td>@Model.TanggalLahir</td>
+                            <td>@Model.TanggalLahir.ToShortDateString()</td>
                         </tr>
                     </table>
                     <a class="btn btn-outline-danger" asp-controller="Account" asp-action="Index" >Back</a>
